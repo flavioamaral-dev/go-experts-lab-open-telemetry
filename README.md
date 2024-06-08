@@ -1,4 +1,4 @@
-## Pós Go Expert Labs
+## Pós Go Expert Labs - racing distribuído e span
 
 sistema em Go que receba um CEP, identifica a cidade e retorna o clima atual (temperatura em graus celsius, fahrenheit e kelvin) juntamente com a cidade. Esse sistema deverá implementar OTEL(Open Telemetry) e Zipkin.
 
@@ -32,5 +32,10 @@ Mensagem: can not find zipcode
 - Implementar tracing distribuído entre Serviço A - Serviço B
 - Utilizar span para medir o tempo de resposta do serviço de busca de CEP e busca de temperatura
 
-- ## Rodar o sistema em ambiente DEV
+## Rodar o sistema em ambiente DEV
 - Executar o comando docker-compose up -d --build
+
+# Observações
+- Sistema A rodará na porta 8080
+- Sistema B rodará na porta 8081
+- Para ver o rastreamento ir no navegador e digital: http://localhost:9411
