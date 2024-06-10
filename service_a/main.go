@@ -83,7 +83,7 @@ func getWeather(w http.ResponseWriter, r *http.Request) {
 
 	response, statusCode, err := requestServiceB(ctx, body)
 	if err != nil {
-		httpError(w, http.StatusUnprocessableEntity, errors.ErrInvalidZipCode.Error(), err)
+		httpError(w, http.StatusUnprocessableEntity, errors.ErrorNotFoundZipCode.Error(), err)
 		return
 	}
 
